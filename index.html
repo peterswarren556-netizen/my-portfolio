@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Peter – Software Developer, Eldoret</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F6F8F4; --surface:#FFFFFF; --ink:#10261E; --muted:#556860; --line:#D5DDD6;
+  --lane:#2B59C3; --accent:#F2C230; --on-accent:#10261E;
+  --head:"Bricolage Grotesque","Trebuchet MS",sans-serif; --body:"Figtree","Segoe UI",sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){color-scheme:dark;--bg:#0C1A15;--surface:#13261F;--ink:#EAF1EC;--muted:#9DB0A6;--line:#274035;--lane:#7FA2F5;}
+}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0C1A15;--surface:#13261F;--ink:#EAF1EC;--muted:#9DB0A6;--line:#274035;--lane:#7FA2F5;}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lane);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:var(--head);line-height:1.05;margin:0}
+
+/* hero: running-track lanes */
+.hero{position:relative;overflow:hidden;padding:5rem 0 4rem;
+  background:repeating-linear-gradient(to bottom,transparent 0 3.2rem,var(--line) 3.2rem calc(3.2rem + 2px))}
+.hero .wrap{position:relative}
+.name{font-size:clamp(5rem,26vw,13rem);font-weight:800;letter-spacing:-.04em;
+  background:var(--bg);display:inline-block;padding-right:.15em}
+.role{font-family:var(--head);font-weight:500;font-size:clamp(1.25rem,3.6vw,1.9rem);
+  background:var(--bg);display:inline-block;padding:.1em .4em .1em 0;margin-top:.6rem}
+.role b{background:var(--accent);color:var(--on-accent);padding:.05em .35em;font-weight:800}
+.lede{max-width:34rem;background:var(--bg);padding:.6rem 1rem .6rem 0;margin:1.2rem 0 0;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
+.btn{display:inline-block;padding:.8rem 1.3rem;border:2px solid var(--ink);border-radius:.25rem;font-weight:600;text-decoration:none;background:var(--bg)}
+.btn.main{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.btn:hover{border-color:var(--lane)}
+
+section{padding:4rem 0;border-top:2px solid var(--ink)}
+section h2{font-size:clamp(2rem,6vw,3rem);margin-bottom:1.5rem}
+.two{display:grid;gap:2rem;grid-template-columns:1fr}
+@media(min-width:48rem){.two{grid-template-columns:1fr 1fr}}
+.edu{border-left:6px solid var(--lane);padding-left:1.1rem}
+.edu h3{font-size:1.5rem}
+.edu p{margin:.3rem 0;color:var(--muted)}
+.skills{display:flex;flex-wrap:wrap;gap:.5rem;padding:0;margin:0;list-style:none}
+.skills li{border:2px solid var(--line);background:var(--surface);padding:.35rem .8rem;border-radius:2rem;font-weight:600}
+
+.projects{display:grid;gap:1.25rem;grid-template-columns:1fr}
+@media(min-width:48rem){.projects{grid-template-columns:repeat(3,1fr)}}
+.proj{background:var(--surface);border:2px solid var(--line);border-top:6px solid var(--lane);padding:1.25rem;display:flex;flex-direction:column;gap:.6rem}
+.proj:nth-child(2){border-top-color:var(--accent)}
+.proj:nth-child(3){border-top-color:var(--ink)}
+.proj h3{font-size:1.4rem}
+.proj p{margin:0;color:var(--muted)}
+.tags{margin-top:auto;font-size:.9rem;font-weight:600}
+.note{margin-top:1rem;font-size:.95rem;color:var(--muted)}
+
+.contact{background:var(--ink);color:var(--bg)}
+.contact h2{color:var(--bg)}
+.contact .btn{border-color:var(--bg);background:transparent;color:var(--bg)}
+.contact .btn.main{background:var(--accent);color:#10261E;border-color:var(--accent)}
+.contact p{max-width:34rem}
+.phone{font-family:var(--head);font-weight:800;font-size:clamp(2rem,9vw,3.6rem);display:block;margin:.5rem 0 1.25rem;text-decoration:none}
+footer{padding:1.5rem 0;color:var(--muted);font-size:.95rem}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1 class="name">Peter</h1><br>
+    <p class="role">I build software in <b>Eldoret</b></p>
+    <p class="lede">Third-year Bachelor of Information Technology student at the University of Eldoret, majoring in software development. I’m 22, I like turning ideas into working apps, and I’m looking for internships and projects to learn from.</p>
+    <div class="cta">
+      <a class="btn main" href="https://wa.me/254722927720" target="_blank" rel="noopener">Message on WhatsApp</a>
+      <a class="btn" href="tel:+254722927720">Call 0722 927 720</a>
+      <a class="btn" href="#projects">See my projects</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap two">
+    <div>
+      <h2>About me</h2>
+      <p>I’m Peter, a software development student based in Eldoret. I enjoy solving real problems with code: clean web pages, simple databases, and tools that people can actually use.</p>
+      <p>I learn by building. Every project teaches me something new about design, debugging, and working with other people.</p>
+    </div>
+    <div>
+      <h2>Education</h2>
+      <div class="edu">
+        <h3>University of Eldoret</h3>
+        <p>Bachelor of Information Technology</p>
+        <p>Major: Software Development · Year 3</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <ul class="skills">
+      <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Python</li><li>Java</li>
+      <li>SQL</li><li>MySQL</li><li>Git &amp; GitHub</li><li>Problem solving</li><li>Teamwork</li>
+    </ul>
+    <p class="note">Edit this list to match the tools you use.</p>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <div class="projects">
+      <article class="proj">
+        <h3>Student portal</h3>
+        <p>A web app where students check units, timetables, and notices in one place.</p>
+        <span class="tags">HTML · CSS · JavaScript</span>
+      </article>
+      <article class="proj">
+        <h3>Inventory tracker</h3>
+        <p>A database-backed system that records stock in and out for a small shop.</p>
+        <span class="tags">Python · SQL</span>
+      </article>
+      <article class="proj">
+        <h3>This portfolio</h3>
+        <p>A responsive, single-page site that shows who I am and how to reach me.</p>
+        <span class="tags">HTML · CSS</span>
+      </article>
+    </div>
+    <p class="note">These are sample projects. Replace them with your own and add links to your GitHub.</p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Let’s connect</h2>
+    <p>Have an internship, a project, or an idea? Call or WhatsApp me and let’s talk.</p>
+    <a class="phone" href="tel:+254722927720">0722 927 720</a>
+    <div class="cta">
+      <a class="btn main" href="https://wa.me/254722927720" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <a class="btn" href="tel:+254722927720">Call now</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="y">2026</span> Peter · Eldoret, Kenya</div>
+</footer>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
